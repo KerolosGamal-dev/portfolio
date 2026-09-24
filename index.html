@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kerolos Gamal | MEAN Stack Developer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#0ea5e9',
+            secondary: '#6366f1',
+          },
+          animation: {
+            'fade-in': 'fadeIn 0.8s ease-in',
+            'slide-up': 'slideUp 0.8s ease-out',
+          },
+          keyframes: {
+            fadeIn: { '0%': { opacity: '0' }, '100%': { opacity: '1' } },
+            slideUp: { '0%': { transform: 'translateY(30px)', opacity: '0' }, '100%': { transform: 'translateY(0)', opacity: '1' } },
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .gradient-text {
+      background: linear-gradient(90deg, #0ea5e9, #6366f1);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .card-hover {
+      transition: all 0.3s ease;
+    }
+    .card-hover:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(14, 165, 233, 0.15);
+    }
+  </style>
+</head>
+<body class="bg-white dark:bg-slate-950 text-slate-800 dark:text-slate-200 transition-colors duration-300">
+
+  <!-- Navbar -->
+  <nav class="fixed top-0 w-full bg-white/80 dark:bg-slate-950/80 backdrop-blur-md z-50 border-b border-slate-200 dark:border-slate-800">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="#home" class="text-2xl font-bold gradient-text">KG.</a>
+      <div class="hidden md:flex gap-8 items-center">
+        <a href="#home" class="hover:text-primary transition">Home</a>
+        <a href="#about" class="hover:text-primary transition">About</a>
+        <a href="#skills" class="hover:text-primary transition">Skills</a>
+        <a href="#projects" class="hover:text-primary transition">Projects</a>
+        <a href="#contact" class="hover:text-primary transition">Contact</a>
+      </div>
+      <button id="themeToggle" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 hover:scale-110 transition">
+        <span id="themeIcon">🌙</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="min-h-screen flex items-center justify-center px-6 pt-20">
+    <div class="max-w-4xl text-center animate-fade-in">
+      <p class="text-primary font-semibold mb-4 tracking-wider">HELLO, I'M</p>
+      <h1 class="text-5xl md:text-7xl font-bold mb-6">
+        Kerolos <span class="gradient-text">Gamal</span>
+      </h1>
+      <h2 class="text-2xl md:text-3xl text-slate-600 dark:text-slate-400 mb-8">
+        Full-Stack MEAN Stack Developer & Team Lead
+      </h2>
+      <p class="text-lg text-slate-600 dark:text-slate-400 mb-10 max-w-2xl mx-auto">
+        I build scalable web applications and lead teams to deliver high-quality solutions using MongoDB, Express, Angular, and Node.js.
+      </p>
+      <div class="flex gap-4 justify-center flex-wrap">
+        <a href="#projects" class="px-8 py-3 bg-primary text-white rounded-lg hover:bg-sky-600 transition font-semibold">View Projects</a>
+        <a href="#contact" class="px-8 py-3 border-2 border-primary text-primary rounded-lg hover:bg-primary hover:text-white transition font-semibold">Contact Me</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-24 px-6 bg-slate-50 dark:bg-slate-900">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-4xl font-bold text-center mb-4">About <span class="gradient-text">Me</span></h2>
+      <div class="w-20 h-1 bg-primary mx-auto mb-12"></div>
+      <p class="text-lg leading-relaxed text-slate-600 dark:text-slate-400 text-center mb-8">
+        I'm a passionate Full-Stack Developer specializing in the MEAN stack with proven experience leading development teams. I focus on building clean, scalable, and performant web applications that solve real-world problems.
+      </p>
+      <p class="text-lg leading-relaxed text-slate-600 dark:text-slate-400 text-center">
+        With a strong foundation in both frontend and backend development, I bridge the gap between design and functionality, ensuring every project delivers exceptional user experiences and robust performance.
+      </p>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="py-24 px-6">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-4xl font-bold text-center mb-4">My <span class="gradient-text">Skills</span></h2>
+      <div class="w-20 h-1 bg-primary mx-auto mb-16"></div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="card-hover p-6 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 text-center">
+          <div class="text-4xl mb-3">🍃</div>
+          <h3 class="font-bold">MongoDB</h3>
+        </div>
+        <div class="card-hover p-6 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 text-center">
+          <div class="text-4xl mb-3">🚀</div>
+          <h3 class="font-bold">Express.js</h3>
+        </div>
+        <div class="card-hover p-6 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 text-center">
+          <div class="text-4xl mb-3">🅰️</div>
+          <h3 class="font-bold">Angular</h3>
+        </div>
+        <div class="card-hover p-6 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 text-center">
+          <div class="text-4xl mb-3">⚡</div>
+          <h3 class="font-bold">Node.js</h3>
+        </div>
+        <div class="card-hover p-6 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 text-center">
+          <div class="text-4xl mb-3">📘</div>
+          <h3 class="font-bold">TypeScript</h3>
+        </div>
+        <div class="card-hover p-6 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 text-center">
+          <div class="text-4xl mb-3">🎨</div>
+          <h3 class="font-bold">Tailwind CSS</h3>
+        </div>
+        <div class="card-hover p-6 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 text-center">
+          <div class="text-4xl mb-3">🔌</div>
+          <h3 class="font-bold">REST APIs</h3>
+        </div>
+        <div class="card-hover p-6 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 text-center">
+          <div class="text-4xl mb-3">👥</div>
+          <h3 class="font-bold">Team Leadership</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-24 px-6 bg-slate-50 dark:bg-slate-900">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-4xl font-bold text-center mb-4">My <span class="gradient-text">Projects</span></h2>
+      <div class="w-20 h-1 bg-primary mx-auto mb-16"></div>
+
+      <div class="grid md:grid-cols-2 gap-8">
+
+        <!-- Project 1: TaskFlow -->
+        <div class="card-hover bg-white dark:bg-slate-800 rounded-2xl p-8 border border-slate-200 dark:border-slate-700">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-2xl">📋</div>
+            <h3 class="text-2xl font-bold">TaskFlow</h3>
+          </div>
+          <div class="space-y-4 text-slate-600 dark:text-slate-400">
+            <div>
+              <p class="text-primary font-semibold text-sm mb-1">🎯 GOAL</p>
+              <p>Centralized task management platform for teams to organize tasks, group them into projects, and manage workflows efficiently.</p>
+            </div>
+            <div>
+              <p class="text-primary font-semibold text-sm mb-1">💼 ROLE</p>
+              <p>Team Lead & Backend Developer</p>
+            </div>
+            <div>
+              <p class="text-primary font-semibold text-sm mb-1">⚙️ METHOD</p>
+              <p>MEAN Stack, RESTful APIs, JWT Authentication, RBAC, Socket.io for real-time updates.</p>
+            </div>
+            <div>
+              <p class="text-primary font-semibold text-sm mb-1">✨ RESULT</p>
+              <p>Reduced task allocation time by 40% and improved overall team productivity.</p>
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-2 mt-6">
+            <span class="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">MongoDB</span>
+            <span class="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">Express</span>
+            <span class="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">Angular</span>
+            <span class="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">Node.js</span>
+            <span class="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">Socket.io</span>
+          </div>
+        </div>
+
+        <!-- Project 2: TechNova Store -->
+        <div class="card-hover bg-white dark:bg-slate-800 rounded-2xl p-8 border border-slate-200 dark:border-slate-700">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center text-2xl">🛒</div>
+            <h3 class="text-2xl font-bold">TechNova Store</h3>
+          </div>
+          <div class="space-y-4 text-slate-600 dark:text-slate-400">
+            <div>
+              <p class="text-secondary font-semibold text-sm mb-1">🎯 GOAL</p>
+              <p>Scalable e-commerce platform for electronics with a seamless shopping experience and secure checkout.</p>
+            </div>
+            <div>
+              <p class="text-secondary font-semibold text-sm mb-1">💼 ROLE</p>
+              <p>Full-Stack Developer</p>
+            </div>
+            <div>
+              <p class="text-secondary font-semibold text-sm mb-1">⚙️ METHOD</p>
+              <p>MEAN Stack, Stripe API integration, Cloudinary for images, Angular state management.</p>
+            </div>
+            <div>
+              <p class="text-secondary font-semibold text-sm mb-1">✨ RESULT</p>
+              <p>Handled high traffic, reduced load times by 30%, increased conversion rates.</p>
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-2 mt-6">
+            <span class="px-3 py-1 bg-secondary/10 text-secondary text-xs rounded-full">MongoDB</span>
+            <span class="px-3 py-1 bg-secondary/10 text-secondary text-xs rounded-full">Express</span>
+            <span class="px-3 py-1 bg-secondary/10 text-secondary text-xs rounded-full">Angular</span>
+            <span class="px-3 py-1 bg-secondary/10 text-secondary text-xs rounded-full">Stripe</span>
+            <span class="px-3 py-1 bg-secondary/10 text-secondary text-xs rounded-full">Cloudinary</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-24 px-6">
+    <div class="max-w-2xl mx-auto">
+      <h2 class="text-4xl font-bold text-center mb-4">Get In <span class="gradient-text">Touch</span></h2>
+      <div class="w-20 h-1 bg-primary mx-auto mb-12"></div>
+      <form class="space-y-6">
+        <div>
+          <label class="block text-sm font-semibold mb-2">Your Name</label>
+          <input type="text" class="w-full px-4 py-3 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg focus:outline-none focus:border-primary transition" placeholder="John Doe"/>
+        </div>
+        <div>
+          <label class="block text-sm font-semibold mb-2">Your Email</label>
+          <input type="email" class="w-full px-4 py-3 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg focus:outline-none focus:border-primary transition" placeholder="john@example.com"/>
+        </div>
+        <div>
+          <label class="block text-sm font-semibold mb-2">Message</label>
+          <textarea rows="5" class="w-full px-4 py-3 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg focus:outline-none focus:border-primary transition" placeholder="Tell me about your project..."></textarea>
+        </div>
+        <button type="submit" class="w-full px-8 py-3 bg-primary text-white rounded-lg hover:bg-sky-600 transition font-semibold">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8 px-6 border-t border-slate-200 dark:border-slate-800 text-center text-slate-500">
+    <p>© 2026 Kerolos Gamal. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Dark/Light Mode Toggle
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = document.getElementById('themeIcon');
+    const html = document.documentElement;
+
+    themeToggle.addEventListener('click', () => {
+      html.classList.toggle('dark');
+      themeIcon.textContent = html.classList.contains('dark') ? '🌙' : '☀️';
+    });
+
+    // Form submission
+    document.querySelector('form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('Thanks for reaching out! I will get back to you soon.');
+    });
+  </script>
+</body>
+</html>
